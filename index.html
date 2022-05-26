@@ -2,6 +2,9 @@
 <html lang="en">
 <script src="script.js"></script>
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300&display=swap" rel="stylesheet">
 
 <head>
 	<meta charset="UTF-8">
@@ -10,23 +13,38 @@
 
 <body>
 	<div class="container">
+		<h1>Home Cleanin<a href="http://goffdev.org/">g</a> List</h1>
 	    <div class="right">
-	        <pre id="rightPrint"></pre>
+	    	<h2>Tonya</h2>
+	        <ol id="rightlist"></ol>
 	    </div>
 	    <div class="left">
-	        <pre id="leftPrint"></pre>
+	    	<h2>Logan</h2>
+	        <ol id="leftlist"></ol>
 	    </div>
 
 	    <button id="btn">Click me</button>
 	    	<script>
 				let arr = ["Roger", "Russell", "Clyde", "Egbert", "Clare", "Bobbie", "Simon", "Elizabeth", "Ted", "Caroline", "John"];
+				var listofarr = [];
+				var listofarrr = [];
+				var leftlist = document.getElementById("leftlist");
+				var rightlist = document.getElementById("rightlist");
 			    let btn = document.getElementById("btn");
 				btn.addEventListener('click', event => {
 					const choices = arr.sort(() => Math.random() - 0.5)
 					const firsthalf = choices.slice(0, 5)
 					const secondhalf = choices.slice(5, 10)
-				    document.getElementById("leftPrint").innerHTML = firsthalf;
-				    document.getElementById("rightPrint").innerHTML = firsthalf;
+				    firsthalf.forEach(function(element) {
+					listofarr.push("<li>" + element + "</li>");
+					});
+
+					secondhalf.forEach(function(element) {
+					listofarrr.push("<li>" + element + "</li>");
+					});
+
+					rightlist.innerHTML = listofarr.join('');
+					leftlist.innerHTML = listofarrr.join('');
 				});
 			</script>
 	</div>
