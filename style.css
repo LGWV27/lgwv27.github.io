@@ -1,18 +1,69 @@
+body{
+    background-color: #293241;
+}
+
+h1{
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 24;
+    color: #E0FBFC;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #EE6C4D;
+    text-decoration-thickness: 5px;
+    transition: text-decoration-thickness 5s;
+}
+
+h2{
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 16;
+    color: #E0FBFC;
+}
+
+a{
+    color: #EE6C4D;
+}
+
+ul{
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: #EE6C4D;
+}
+li{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #E0FBFC;
+}
+
 .container {
-   height: auto;
-   overflow: hidden;
+    height: auto;
+    overflow: hidden;
+    margin: auto;
+    width: 80%;
+    border: 5px solid #FFFF00;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #293241;
+    text-align: center;
 }
 
 .right {
-    width: 180px;
+    width: 50%;
     float: right;
-    background: #aafed6;
+    border-left: red 2px solid;
 }
 
 .left {
     float: none; /* not needed, just for clarification */
-    background: #e8f6fe;
     /* the next props are meant to keep this block independent from the other floated one */
     width: auto;
     overflow: hidden;
-}​​
+}
+
+.bottom {
+    width: 100%;
+    text-align: center;
+}
+
+.bottomlist {
+    text-align: center;
+}

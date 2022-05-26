@@ -1,18 +1,4 @@
-function randomNoRepeats(array) {
-  var copy = array.slice(0);
-  return function() {
-    if (copy.length < 1) { copy = array.slice(0); }
-    var index = Math.floor(Math.random() * copy.length);
-    var item = copy[index];
-    copy.splice(index, 1);
-    return item;
-  };
-}
-
-var chooser = randomNoRepeats(['Foo', 'Bar', 'Gah']);
-document.getElementById("firstTask").innerHTML = chooser;
-document.getElementById("secondTask").innerHTML = chooser;
-document.getElementById("thirdTask").innerHTML = chooser;
-document.getElementById("fourthTask").innerHTML = chooser;
-document.getElementById("fifthTask").innerHTML = chooser;
-document.getElementById("sixthTask").innerHTML = chooser;
+const arr = ["Roger", "Russell", "Clyde", "Egbert", "Clare", "Bobbie", "Simon", "Elizabeth", "Ted", "Caroline", "John"];
+const choices = arr.sort(() => Math.random() - 0.5)
+const firsthalf = choices.slice(0, 5)
+const secondhalf = choices.slice(5, 10)

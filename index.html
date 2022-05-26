@@ -5,6 +5,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
 
 <head>
 	<meta charset="UTF-8">
@@ -16,36 +17,56 @@
 		<h1>Home Cleanin<a href="http://goffdev.org/">g</a> List</h1>
 	    <div class="right">
 	    	<h2>Tonya</h2>
-	        <ol id="rightlist"></ol>
+	        <div class="right">
+		        <ul> Daily Tasks
+		        	<li>Clean kitchen countertops</li>
+		        	<li>Clean stovetop</li>
+		        	<li>Clean sink at end of day</li>
+		        </ul>
+	    	</div>
+	    	<div class="left">
+	    		<ul> Daily Tasks
+		        	<li>Clean kitchen countertops</li>
+		        	<li>Clean stovetop</li>
+		        	<li>Clean sink at end of day</li>
+		        </ul>
+	    	</div>
+	    	<div class="bottom">
+	    		<ul class="bottomlist"> Daily Tasks
+		        	<li>Clean kitchen countertops</li>
+		        	<li>Clean stovetop</li>
+		        	<li>Clean sink at end of day</li>
+		        </ul>
+	    	</div>
 	    </div>
 	    <div class="left">
 	    	<h2>Logan</h2>
-	        <ol id="leftlist"></ol>
+	        <div class="right">
+		        <ul> <p id="change">help</p>Daily Tasks
+		        	<li>Clean kitchen countertops</li>
+		        	<li>Clean stovetop</li>
+		        	<li>Clean sink at end of day</li>
+		        </ul>
+	    	</div>
+	    	<div class="left">
+	    		<ul> Daily Tasks
+		        	<li>Clean kitchen countertops</li>
+		        	<li>Clean stovetop</li>
+		        	<li>Clean sink at end of day</li>
+		        </ul>
+	    	</div>
 	    </div>
-
-	    <button id="btn">Click me</button>
-	    	<script>
-				let arr = ["Roger", "Russell", "Clyde", "Egbert", "Clare", "Bobbie", "Simon", "Elizabeth", "Ted", "Caroline", "John"];
-				var listofarr = [];
-				var listofarrr = [];
-				var leftlist = document.getElementById("leftlist");
-				var rightlist = document.getElementById("rightlist");
-			    let btn = document.getElementById("btn");
-				btn.addEventListener('click', event => {
-					const choices = arr.sort(() => Math.random() - 0.5)
-					const firsthalf = choices.slice(0, 5)
-					const secondhalf = choices.slice(5, 10)
-				    firsthalf.forEach(function(element) {
-					listofarr.push("<li>" + element + "</li>");
-					});
-
-					secondhalf.forEach(function(element) {
-					listofarrr.push("<li>" + element + "</li>");
-					});
-
-					rightlist.innerHTML = listofarr.join('');
-					leftlist.innerHTML = listofarrr.join('');
-				});
-			</script>
 	</div>
+
+<script>
+
+    document.getElementById('change').onclick = changeColor;   
+
+    function changeColor() {
+        document.body.style.color = "purple";
+        return false;
+    }   
+
+</script>
+
 </body>
