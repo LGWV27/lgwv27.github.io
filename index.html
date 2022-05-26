@@ -15,17 +15,19 @@
 	    </div>
 	    <div class="left">
 	        <pre id="leftPrint"></pre>
-
-			<script>
-				let arr = ["Roger", "Russell", "Clyde", "Egbert", "Clare", "Bobbie", "Simon", "Elizabeth", "Ted", "Caroline", "John"];
-				const choices = arr.sort(() => Math.random() - 0.5)
-				const firsthalf = choices.slice(0, 5)
-				const secondhalf = choices.slice(5, 10)
-			    function dave(){document.getElementById("leftPrint").innerHTML = firsthalf;}
-			    function john(){document.getElementById("rightPrint").innerHTML = firsthalf;}
-			    setInterval(dave, 1000 * 60 * 60 * 24);
-			    setInterval(john, 1000 * 60 * 60 * 24);
-			</script>
 	    </div>
+
+	    <button id="btn">Click me</button>
+	    	<script>
+				let arr = ["Roger", "Russell", "Clyde", "Egbert", "Clare", "Bobbie", "Simon", "Elizabeth", "Ted", "Caroline", "John"];
+			    let btn = document.getElementById("btn");
+				btn.addEventListener('click', event => {
+					const choices = arr.sort(() => Math.random() - 0.5)
+					const firsthalf = choices.slice(0, 5)
+					const secondhalf = choices.slice(5, 10)
+				    function dave(){document.getElementById("leftPrint").innerHTML = firsthalf;}
+				    function john(){document.getElementById("rightPrint").innerHTML = firsthalf;}
+				});
+			</script>
 	</div>
 </body>
