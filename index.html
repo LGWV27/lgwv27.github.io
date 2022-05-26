@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="script.js"></script>
 <link rel="stylesheet" href="style.css">
 
 <head>
@@ -13,9 +14,15 @@
 	        Today Tonya will <span id="firstTask"></span>, <span id="secondTask"></span>, <span id="thirdTask"></span>
 	    </div>
 	    <div class="left">
-	        Today Logan will <span id="fourthTask"></span>, <span id="fifthTask"></span>, <span id="sixthTask"></span>
+	        <pre id="arrPrint"></pre>
+
+			<script>
+				let arr = ["Roger", "Russell", "Clyde", "Egbert", "Clare", "Bobbie", "Simon", "Elizabeth", "Ted", "Caroline", "John"];
+				const choices = arr.sort(() => Math.random() - 0.5)
+				const firsthalf = choices.slice(0, 5)
+				const secondhalf = choices.slice(5, 10)
+			    document.getElementById("arrPrint").innerHTML = firsthalf;
+			</script>
 	    </div>
 	</div>
 </body>
-	
-<script src="script.js"></script>
